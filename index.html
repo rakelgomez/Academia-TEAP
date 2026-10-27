@@ -11,32 +11,33 @@
     
     <style>
         :root {
-            --bg-color: #f7f1e3; /* Tono pergamino/crema suave de tus capturas */
-            --card-bg: #ffffff;
-            --text-main: #2c3e50;
-            --accent-color: #7b241c; /* Tono granate similar al de "PRÓXIMAMENTE" */
-            --primary-blue: #1b4f72; /* Tono azulado de los títulos de tus menús */
-            --border-color: #e2d8c3;
+            /* Tu Paleta de Colores Oficial */
+            --azul-acuarela: #A4C8E1;
+            --verde-menta: #B2D7C5;
+            --purpura-lavanda: #C3A9CE;
+            --sepia-claro: #D8C6A6;
+            --dorado-suave: #EACF91;
+            --gris-neutro: #F2EFEA;
+            --azul-profundo: #5B7594;
+            --purpura-grisaceo: #7B6D8F;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--gris-neutro);
+            color: var(--azul-profundo);
             margin: 0;
             padding: 0;
             line-height: 1.7;
-            background-image: radial-gradient(#e5dbc5 0.75px, transparent 0.75px);
-            background-size: 15px 15px; /* Sutil efecto textura papel */
         }
 
         header {
-            background: linear-gradient(135deg, rgba(27, 79, 114, 0.9), rgba(44, 62, 80, 0.95)), url('https://rakelgomez.github.io/Academia-TEAP/') center/cover;
-            color: white;
+            background: linear-gradient(135deg, var(--azul-acuarela), var(--purpura-lavanda));
+            color: var(--azul-profundo);
             padding: 4rem 1.5rem;
             text-align: center;
-            border-bottom: 4px solid var(--accent-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--sepia-claro);
+            box-shadow: 0 4px 15px rgba(91, 117, 148, 0.1);
         }
 
         header h1 {
@@ -44,7 +45,8 @@
             margin: 0 0 0.5rem 0;
             font-size: 2.8rem;
             letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: var(--azul-profundo);
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
         }
 
         header p {
@@ -57,115 +59,5 @@
 
         .cta-btn {
             display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            padding: 0.9rem 2.2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-        }
-
-        .cta-btn:hover {
-            background-color: #641e16;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-
-        main {
-            max-width: 850px;
-            margin: -2.5rem auto 3rem auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
-        }
-
-        h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--primary-blue);
-            margin-top: 0;
-            font-size: 1.7rem;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 0.5rem;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2.5rem;
-            color: #5d6d7e;
-            font-size: 0.95rem;
-            border-top: 1px solid var(--border-color);
-            background-color: rgba(247, 241, 227, 0.8);
-        }
-
-        footer a {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Academia TEAP</h1>
-        <p>La app gratuita diseñada por y para Técnicos en Anatomía Patológica y Citología</p>
-        <a href="https://play.google.com/store/apps/details?id=com.academiateap" target="_blank" class="cta-btn">Descargar en Google Play</a>
-    </header>
-
-    <main>
-        <section class="card">
-            <h2>Preparar tu oposición nunca fue tan visual y eficaz</h2>
-            <p>
-                <strong>Academia TEAP</strong> es la herramienta definitiva para opositores que buscan practicar tests de forma sencilla, intuitiva y eficiente. Diseñada con rigor profesional, te ayuda a repasar conceptos clave de Anatomía Patológica y Citología de forma dinámica para alcanzar tus metas.
-            </p>
-        </section>
-
-        <section class="card">
-            <h2>¿Qué encontrarás en la aplicación?</h2>
-            <ul>
-                <li><strong>Test Aleatorios:</strong> Una manera rápida de practicar preguntas recopiladas de diferentes exámenes oficiales de oposiciones de toda España.</li>
-                <li><strong>Enfoque Especializado:</strong> Contenidos adaptados específicamente al día a día y al temario de los profesionales de laboratorio y anatomía patológica.</li>
-                <li><strong>Diseño Ágil:</strong> Una interfaz limpia, sin distracciones, pensada para exprimir al máximo cada momento de estudio.</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h2>Creada por una especialista del sector</h2>
-            <p>
-                Nace desde la experiencia directa en el ámbito sanitario y de la investigación, entendiendo perfectamente qué necesita un opositor para superar con éxito las pruebas de acceso a la plaza.
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Academia TEAP &mdash; Creado por Raquel Gómez</p>
-        <p><a href="https://rakelgomez.github.io/Academia-TEAP/app-ads.txt">Ver app-ads.txt</a></p>
-    </footer>
-
-</body>
-</html>
+            background-color: var(--dorado-suave);
+            color: var(--azul-
