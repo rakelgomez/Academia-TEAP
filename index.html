@@ -4,79 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia TEAP - App de Test para Oposiciones de Anatomía Patológica</title>
+    <!-- Importamos fuentes elegantes de Google Fonts acordes al diseño -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #2b6cb0;
-            --primary-hover: #1a4971;
-            --bg: #f7fafc;
+            --bg-color: #f7f1e3; /* Tono pergamino/crema suave de tus capturas */
             --card-bg: #ffffff;
-            --text: #2d3748;
-            --text-light: #718096;
+            --text-main: #2c3e50;
+            --accent-color: #7b241c; /* Tono granate similar al de "PRÓXIMAMENTE" */
+            --primary-blue: #1b4f72; /* Tono azulado de los títulos de tus menús */
+            --border-color: #e2d8c3;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
+            background-image: radial-gradient(#e5dbc5 0.75px, transparent 0.75px);
+            background-size: 15px 15px; /* Sutil efecto textura papel */
         }
 
         header {
-            background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+            background: linear-gradient(135deg, rgba(27, 79, 114, 0.9), rgba(44, 62, 80, 0.95)), url('https://rakelgomez.github.io/Academia-TEAP/') center/cover;
             color: white;
-            padding: 3rem 1.5rem;
+            padding: 4rem 1.5rem;
             text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         header h1 {
+            font-family: 'Cinzel', serif;
             margin: 0 0 0.5rem 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 1.5rem auto;
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 650px;
+            margin: 0 auto 2rem auto;
+            font-style: italic;
         }
 
         .cta-btn {
             display: inline-block;
-            background-color: #ffffff;
-            color: var(--primary);
-            font-weight: bold;
-            padding: 0.8rem 1.8rem;
-            border-radius: 30px;
+            background-color: var(--accent-color);
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            padding: 0.9rem 2.2rem;
+            border-radius: 4px;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
         }
 
         .cta-btn:hover {
+            background-color: #641e16;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
 
         main {
-            max-width: 800px;
-            margin: -2rem auto 3rem auto;
+            max-width: 850px;
+            margin: -2.5rem auto 3rem auto;
             padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
         }
 
         .card {
             background: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             margin-bottom: 2rem;
         }
 
         h2 {
-            color: var(--primary);
+            font-family: 'Cinzel', serif;
+            color: var(--primary-blue);
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.5rem;
         }
 
         ul {
@@ -84,20 +106,26 @@
         }
 
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            border-top: 1px solid #e2e8f0;
+            padding: 2.5rem;
+            color: #5d6d7e;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+            background-color: rgba(247, 241, 227, 0.8);
         }
 
         footer a {
-            color: var(--primary);
+            color: var(--primary-blue);
             text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -106,37 +134,37 @@
     <header>
         <h1>Academia TEAP</h1>
         <p>La app gratuita diseñada por y para Técnicos en Anatomía Patológica y Citología</p>
-        <a href="https://play.google.com/store/apps/details?id=com.academiateap" target="_blank" class="cta-btn">Ver en Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.academiateap" target="_blank" class="cta-btn">Descargar en Google Play</a>
     </header>
 
     <main>
         <section class="card">
-            <h2>Preparar tu oposición nunca fue tan fácil</h2>
+            <h2>Preparar tu oposición nunca fue tan visual y eficaz</h2>
             <p>
-                <strong>Academia TEAP</strong> es la app ideal para opositores que buscan practicar tests de forma sencilla, intuitiva y eficiente. Si estás preparándote para una oposición en búsqueda de un recurso práctico, esta aplicación te ayudará a repasar conceptos clave de forma dinámica para alcanzar tus objetivos.
+                <strong>Academia TEAP</strong> es la herramienta definitiva para opositores que buscan practicar tests de forma sencilla, intuitiva y eficiente. Diseñada con rigor profesional, te ayuda a repasar conceptos clave de Anatomía Patológica y Citología de forma dinámica para alcanzar tus metas.
             </p>
         </section>
 
         <section class="card">
             <h2>¿Qué encontrarás en la aplicación?</h2>
             <ul>
-                <li><strong>Test Aleatorios:</strong> Una manera rápida de practicar preguntas recopiladas de diferentes exámenes de oposiciones de Anatomía Patológica realizadas por toda España.</li>
-                <li><strong>Diseño ágil e intuitivo:</strong> Enfocado al estudio dinámico sin distracciones.</li>
-                <li><strong>Actualizaciones continuas:</strong> Incorporación progresiva de nuevas preguntas y funcionalidades.</li>
+                <li><strong>Test Aleatorios:</strong> Una manera rápida de practicar preguntas recopiladas de diferentes exámenes oficiales de oposiciones de toda España.</li>
+                <li><strong>Enfoque Especializado:</strong> Contenidos adaptados específicamente al día a día y al temario de los profesionales de laboratorio y anatomía patológica.</li>
+                <li><strong>Diseño Ágil:</strong> Una interfaz limpia, sin distracciones, pensada para exprimir al máximo cada momento de estudio.</li>
             </ul>
         </section>
 
         <section class="card">
-            <h2>Desarrollada por una especialista</h2>
+            <h2>Creada por una especialista del sector</h2>
             <p>
-                Academia TEAP nace del conocimiento de primera mano del temario y las necesidades de la profesión, creada por Raquel Gómez para facilitar la preparación de exámenes y oposiciones a otros profesionales del sector.
+                Nace desde la experiencia directa en el ámbito sanitario y de la investigación, entendiendo perfectamente qué necesita un opositor para superar con éxito las pruebas de acceso a la plaza.
             </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Academia TEAP — Desarrollado por Raquel Gómez</p>
-        <p><a href="https://rakelgomez.github.io/Academia-TEAP/app-ads.txt">app-ads.txt</a></p>
+        <p>&copy; 2026 Academia TEAP &mdash; Creado por Raquel Gómez</p>
+        <p><a href="https://rakelgomez.github.io/Academia-TEAP/app-ads.txt">Ver app-ads.txt</a></p>
     </footer>
 
 </body>
