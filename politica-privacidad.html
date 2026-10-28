@@ -188,8 +188,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Academia TEAP &mdash; Creado por Raquel Gómez</p>
-    </footer>
+    <p>&copy; <span id="current-year"></span> Academia TEAP &mdash; Creado por Raquel Gómez</p>
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
